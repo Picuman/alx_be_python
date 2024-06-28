@@ -13,7 +13,6 @@ match priority:
     case _:
         priority_message = "Invalid priority level entered."
 
-if priority in ["high", "medium", "low"]:
     if time_bound.lower() == "yes":
         time_bound_message = f"**Reminder:** '{task}' requires immediate attention today!"
     else:
