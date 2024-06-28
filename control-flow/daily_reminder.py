@@ -18,4 +18,6 @@ if time_bound == "yes":
     print(f"**Reminder:** '{task}' requires immediate attention today!")
 else:
     print(f"**Note:** '{task}' is a low priority task. Consider completing it when you have free time.")
+    
+print(f"{priority_message}\n{time_bound_message}")
 
