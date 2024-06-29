@@ -17,6 +17,7 @@ else:
     print(f"**Note:** '{task}' is a low priority task. Consider completing it when you have free time.")
     
     print(f"Priority (high/medium/low):" , priority )
+    print(f"Is it time-bound? (yes/no):" , time_bound )
 
  else:
       print("Invalid priority level entered.")
