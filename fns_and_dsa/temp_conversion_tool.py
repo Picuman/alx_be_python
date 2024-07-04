@@ -1,6 +1,3 @@
-# Define global variables for temperature conversion factors
-FAHRENHEIT_TO_CELSIUS_FACTOR = 
-CELSIUS_TO_FAHRENHEIT_FACTOR = 
 
 # Function to convert Fahrenheit to Celsius
 def convert_to_celsius(fahrenheit):
