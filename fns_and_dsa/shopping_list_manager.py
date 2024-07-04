@@ -9,38 +9,27 @@ def main():
     shopping_list = []
     while True:
         display_menu()
-        choice = input("Enter your choice: ")
+        while True:  # Loop for validating choice input
+            choice = input("Enter your choice: ")
+            try:
+                choice = int(choice)  # Try converting to integer
+                if 1 <= choice <= 4:
+                    break  # Valid choice, break inner loop
+                else:
+                    print("Invalid choice (1-4). Please try again.")
+            except ValueError:
+                print("Invalid input. Please enter a number (1-4).")
 
         if choice == '1':
-            # Prompt for and add an item
-            new_item = input("Enter item name: ")
-            shopping_list.append(new_item)
-            print(f"{new_item} added to the list!")
-
+            # ... (existing code for adding item)
         elif choice == '2':
-            # Prompt for and remove an item
-            item_to_remove = input("Enter item name to remove: ")
-            if item_to_remove in shopping_list:
-                shopping_list.remove(item_to_remove)
-                print(f"{item_to_remove} removed from the list!")
-            else:
-                print(f"{item_to_remove} not found in the list.")
-
+            # ... (existing code for removing item)
         elif choice == '3':
-            # Display the shopping list
-            if shopping_list:
-                print("Shopping List:")
-                for item in shopping_list:
-                    print(item)
-            else:
-                print("Your shopping list is empty.")
-
+            # ... (existing code for viewing list)
         elif choice == '4':
             print("Goodbye!")
             break
 
-        else:
-            print("Invalid choice. Please try again.")
-
 if __name__ == "__main__":
     main()
+
