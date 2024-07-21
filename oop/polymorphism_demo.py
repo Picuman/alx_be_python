@@ -1,3 +1,4 @@
+import math
 
 class Shape:
     def area(self):
@@ -17,3 +18,4 @@ class Circle(Shape):
 
     def area(self):
         return math.pi * (self.radius ** 2)
+
