@@ -12,3 +12,10 @@ class Book:
 
     def __del__(self):
         print(f"Deleting '{self.title}'")
+        
+book1 = Book("1984", "George Orwell", 1949)
+print(book1)  # Uses __str__ method
+print(repr(book1))  # Uses __repr__ method
+
+
+del book1
