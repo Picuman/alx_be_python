@@ -13,9 +13,20 @@ class Book:
     def __del__(self):
         print(f"Deleting '{self.title}'")
         
-book1 = Book("1984", "George Orwell", 1949)
-print(book1)  # Uses __str__ method
-print(repr(book1))  # Uses __repr__ method
+from book_class import Book
 
+def main():
+    # Creating an instance of Book
+    my_book = Book("1984", "George Orwell", 1949)
 
-del book1
+    # Demonstrating the __str__ method
+    print(my_book)  # Expected to use __str__
+
+    # Demonstrating the __repr__ method
+    print(repr(my_book))  # Expected to use __repr__
+
+    # Deleting a book instance to trigger __del__
+    del my_book
+
+if __name__ == "__main__":
+    main()
