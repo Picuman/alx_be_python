@@ -11,6 +11,6 @@ def perform_operation(num1, num2, operation):
         if num2 != 0:
             return num1 / num2
         else:
-            return "Cannot divide by 0"
+            print ("Cannot divide by zero")
     else:
         return "Invalid operation"
