@@ -8,16 +8,10 @@ def perform_operation(num1, num2, operation):
     elif operation == "multiply":
         return num1 * num2
     elif operation == "divide":
-        if num2 != 0:
-            return num1 / num2
-        else:
-           print("division by zero is impossible")
+        if num2 == 0:
+            raise ValueError("Division by zero is not allowed.")
+        return num1 / num2
     else:
-        return "Invalid operation"
+        raise ValueError("Unsupported operation. Please use '+', '-', '*', or '/'.")
 
-
-num1 = float(input("Enter the first number : "))
-num2 = float(input("Enter the second number: "))
-operation = input("Enter the operation(add ,substract ,multiply,divide):")
-result = perform_operation(num1,num2,operation)
 
